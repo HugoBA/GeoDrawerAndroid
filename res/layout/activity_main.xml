@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="#EEE"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <QuickContactBadge
+                    android:id="@+id/quickContactBadge1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/avatar" />
+
+                <Button
+                    android:id="@+id/gohome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="#EEE"
+                    android:minHeight="30dip"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="12dp"
+                    android:text=" &lt; Home   "
+                    android:textColor="#333"
+                    android:textColorHint="#FFF"
+                    android:textSize="25sp" />
+
+            </RelativeLayout>
+
+			<TextView
+			    android:layout_width="match_parent"
+			    android:layout_height="1dp"
+			    android:layout_marginTop="10dp"
+			    android:background="#CCC" />
+
+			<TextView
+			    android:id="@+id/textView1"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="GPS Coordinates "
+			    android:textColor="#555" />
+			
+			<TextView
+			    android:id="@+id/latitude"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="#777" 
+			    android:text="Latitude : " />
+			
+			<TextView
+			    android:id="@+id/longitude"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textColor="#777" 
+			    android:text="Longitude : " />
+
+        </LinearLayout>
+
+		<TextView
+		    android:layout_width="1dp"
+		    android:layout_height="match_parent"
+		    android:background="#CCC" />
+
+        <org.osmdroid.views.MapView
+            
+        	class="com.company.MyMapView"
+            android:id="@+id/openmapview"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75" >
+        </org.osmdroid.views.MapView>
+    </LinearLayout>
+
+</RelativeLayout>
